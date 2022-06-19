@@ -1,1 +1,1 @@
-# GAC_Angular
+# Rapid-Template
