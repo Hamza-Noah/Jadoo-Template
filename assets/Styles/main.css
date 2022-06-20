@@ -100,26 +100,28 @@ body {
   color: white;
 }
 
-.landing .plane:first-child {
+.landing .plane:first-child img {
   top: 150px;
-  animation: fly 5s infinite;
 }
 
-.landing .plane:last-child {
+.landing .plane:last-child img {
   top: 200px;
-  right: 100px;
-  animation: fly 5s infinite;
+  right: 0;
+  animation: fly2 15s infinite;
+  animation-delay: 3s;
 }
 
 @keyframes fly {
   0% {
     top: 0px;
-    left: 50px;
+    left: 0px;
   }
   25% {
+    left: 100px;
     top: 200px;
   }
   50% {
+    left: 50px;
     top: 100px;
   }
   75% {
@@ -127,6 +129,29 @@ body {
   }
   100% {
     top: 0px;
+  }
+}
+
+@keyframes fly2 {
+  0% {
+    top: 0px;
+    right: 0px;
+  }
+  25% {
+    top: 200px;
+    right: 100px;
+  }
+  50% {
+    top: 100px;
+    right: 50px;
+  }
+  75% {
+    top: 200px;
+    right: 50px;
+  }
+  100% {
+    top: 0px;
+    right: 0px;
   }
 }
 /*# sourceMappingURL=main.css.map */
