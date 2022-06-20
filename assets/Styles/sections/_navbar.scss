@@ -1,0 +1,15 @@
+.navbar{
+    background-color: transparent !important;
+    .nav-item{
+      color: black;
+    &:not(:last-child){
+      margin-right: 50px;
+    }
+    }
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    margin-top: 50px;
+  }
+}
