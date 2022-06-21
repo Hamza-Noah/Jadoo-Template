@@ -7,6 +7,11 @@
 body {
   font-family: "Open Sans", sans-serif;
 }
+
+.owl-carousel .owl-item img {
+  max-width: 100%
+}
 @import "variables";
 @import "sections/navbar";
 @import "sections/landing";
+@import "sections/category";
