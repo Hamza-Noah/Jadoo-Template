@@ -447,4 +447,80 @@ body {
   height: 50px;
   border-radius: 50%;
 }
+
+.testimonials {
+  margin: 50px 0 0;
+}
+
+.testimonials .head-section p {
+  color: #5E6282;
+  font-weight: bolder;
+}
+
+.testimonials .head-section h2 {
+  color: #14183e;
+  font-weight: 800;
+}
+
+.testimonials .testimonial {
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 12px 26px #0000001a;
+}
+
+.testimonials .testimonial img {
+  top: -30px;
+  left: -30px;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+}
+
+.testimonials .testimonial p {
+  color: #5E6282;
+}
+
+.testimonials .testimonial p:first-child {
+  line-height: 1.7;
+}
+
+.testimonials .testimonial p.client-name {
+  font-weight: 800;
+}
+
+.testimonials .testimonial.hidden {
+  background-color: white;
+  position: absolute;
+  transform: scale(0.8);
+  top: -120px;
+}
+
+.testimonials .owl-carousel {
+  margin-top: 200px;
+}
+
+.testimonials .owl-carousel .owl-item .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonials .owl-carousel .owl-item img {
+  width: 120px !important;
+}
+
+.form {
+  background-color: #dfd7f9;
+  border-radius: 20px;
+  padding: 80px 153px;
+}
+
+.form h2 {
+  color: #5e6282;
+  margin-bottom: 40px;
+}
+
+.form .form input[type=email] {
+  background-color: red;
+}
 /*# sourceMappingURL=main.css.map */

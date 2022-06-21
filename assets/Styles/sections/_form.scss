@@ -1,0 +1,15 @@
+.form {
+  background-color: #dfd7f9;
+  border-radius: 20px;
+  padding: 80px 153px;
+  h2 {
+    color: #5e6282;
+    margin-bottom: 40px;
+  }
+
+  .form {
+    input[type=email] {
+      background-color: red;
+    }
+  }
+}
