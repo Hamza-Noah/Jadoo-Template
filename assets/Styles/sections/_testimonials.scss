@@ -15,6 +15,7 @@
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 12px 26px #0000001a;
+    background-color: white;
 
     img {
       top: -30px;
@@ -42,6 +43,13 @@
     position: absolute;
     transform: scale(0.8);
     top: -120px;
+    z-index: -1;
+  }
+
+  @media (max-width: 991px) {
+    .testimonial {
+      margin: 50px 30px;
+    }
   }
 }
 
@@ -53,8 +61,16 @@
       align-items: center;
       justify-content: center;
     }
+
     .owl-item img {
+      filter: grayscale(1);
       width: 120px !important;
+      transition: all ease-in .3s;
+    }
+
+    .owl-item:hover img {
+      filter: grayscale(0);
+
     }
   }
 }

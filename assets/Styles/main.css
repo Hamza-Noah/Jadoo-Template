@@ -5,18 +5,18 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 a {
   text-decoration: none;
 }
 
-.owl-carousel .owl-item .item .card {
+.destination-carousel .owl-item .item .card {
   border: none !important;
 }
 
-.owl-carousel .owl-item img {
+.destination-carousel .owl-item img {
   max-width: 100%;
 }
 
@@ -24,8 +24,8 @@ a {
   background-color: transparent !important;
 }
 
-.navbar .nav-item {
-  color: black;
+.navbar .nav-item .nav-link {
+  color: black !important;
 }
 
 .navbar .nav-item:not(:last-child) {
@@ -34,13 +34,27 @@ a {
 
 @media (max-width: 991px) {
   .navbar-collapse {
+    top: 50px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #fff1da;
+    position: absolute;
     margin-top: 50px;
+  }
+  .navbar-collapse li {
+    padding-left: 20px;
+  }
+  .navbar-collapse li a {
+    display: block;
+    padding: 20px;
+    font-weight: bolder;
   }
 }
 
 .landing {
   padding-top: 100px;
-  margin-top: -60px;
+  margin: -60px 0 50px;
   background-image: url("../images/SVG/landing-Decore.svg");
   background-position: 120% -70px;
   background-size: contain;
@@ -86,7 +100,7 @@ a {
 
 .landing a {
   margin-right: 44px;
-  padding: 0 30px;
+  padding: 25px 30px;
   border-radius: 10px;
   text-decoration: none;
   background-color: #F1A501;
@@ -110,6 +124,18 @@ a {
   border-radius: 50%;
   background-color: #DF6951;
   color: white;
+}
+
+@media (max-width: 767px) {
+  .landing .holder {
+    justify-content: center;
+  }
+  .landing a {
+    margin: 20px 0;
+  }
+  .landing button {
+    margin: 0;
+  }
 }
 
 .landing .plane:first-child img {
@@ -142,6 +168,7 @@ a {
   }
   100% {
     top: 0px;
+    left: 0;
   }
 }
 
@@ -169,9 +196,11 @@ a {
 }
 
 .category {
+  margin: 100px 0 20px;
   background-image: url(../images/category.png);
   background-repeat: no-repeat;
   background-position: 95% top;
+  overflow: auto;
 }
 
 .category .head-section p {
@@ -186,11 +215,11 @@ a {
 
 .category .category-carousel {
   padding: 25px 0;
-  overflow: auto;
+  overflow-x: auto !important;
 }
 
 .category .item {
-  padding: 50px 0;
+  padding: 100px 20px;
 }
 
 .category .card {
@@ -218,6 +247,30 @@ a {
 
 .category .card p {
   color: #5E6282;
+}
+
+@media (max-width: 991px) {
+  .category .owl-item .item .card {
+    border: solid 0.1px #5E6282 !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .category .owl-item .item .card {
+    width: 300px;
+    margin: auto;
+    box-shadow: 0px 52px 46px #00000012;
+  }
+  .category .owl-item .item .card:hover {
+    box-shadow: 0px 72px 46px #00000012;
+  }
+}
+
+@media (min-width: 992px) {
+  .category .owl-item .item .card {
+    width: 267px;
+    border: none !important;
+  }
 }
 
 .category .owl-item .card .img::before {
@@ -289,6 +342,11 @@ a {
   width: 314px;
   box-shadow: 0px 16px 26px #00000017;
   border-radius: 0 0 24px 24px !important;
+  transition: all ease-in 0.3s;
+}
+
+.destinations .card:hover {
+  box-shadow: 15px 34px 26px #00000017;
 }
 
 .destinations .img {
@@ -337,6 +395,10 @@ a {
   }
 }
 
+.trip {
+  margin-bottom: 150px;
+}
+
 .trip .head-section p {
   color: #5E6282;
   font-weight: bolder;
@@ -368,6 +430,16 @@ a {
 
 .trip .procedures p {
   font-size: 14px;
+}
+
+@media (max-width: 991px) {
+  .trip .info {
+    padding: 0 40px;
+  }
+  .trip .trip-card {
+    margin: auto;
+    max-width: 400px;
+  }
 }
 
 .trip .trip-card {
@@ -451,6 +523,16 @@ a {
   border-radius: 50%;
 }
 
+@media (max-width: 991px) {
+  .trip .trip-card {
+    padding-bottom: 100px !important;
+  }
+  .trip .trip-destination {
+    left: 50%;
+    transform: translate(-50%, 100%);
+  }
+}
+
 .testimonials {
   margin: 50px 0 0;
 }
@@ -469,6 +551,7 @@ a {
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0px 12px 26px #0000001a;
+  background-color: white;
 }
 
 .testimonials .testimonial img {
@@ -496,6 +579,13 @@ a {
   position: absolute;
   transform: scale(0.8);
   top: -120px;
+  z-index: -1;
+}
+
+@media (max-width: 991px) {
+  .testimonials .testimonial {
+    margin: 50px 30px;
+  }
 }
 
 .testimonials .owl-carousel {
@@ -509,7 +599,13 @@ a {
 }
 
 .testimonials .owl-carousel .owl-item img {
+  filter: grayscale(1);
   width: 120px !important;
+  transition: all ease-in .3s;
+}
+
+.testimonials .owl-carousel .owl-item:hover img {
+  filter: grayscale(0);
 }
 
 .form {
@@ -521,13 +617,11 @@ a {
 
 .form .form-wraper {
   position: relative;
-  border-radius: 20px;
+  border-radius: 120px 20px 20px;
   padding: 80px 153px;
-  background-image: url("../images/SVG/form-decor-left.svg");
-  background-position: -150px 50px;
-  background-repeat: no-repeat;
-  background-color: #dfd7f9;
+  background-color: rgba(223, 215, 249, 0.2);
   overflow: hidden;
+  z-index: 4;
 }
 
 .form .form-wraper h2 {
@@ -539,14 +633,23 @@ a {
   content: "";
   position: absolute;
   background-image: url("../images/SVG/form-decor-right.svg");
-  top: -10px;
-  height: 200px;
+  top: 2px;
+  right: -25px;
+  height: 324px;
   width: 300px;
 }
 
 @media (max-width: 991px) {
   .form .form-wraper {
     padding: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .form .form-wraper {
+    background-image: url("../images/SVG/form-decor-left.svg");
+    background-position: -74px 36px;
+    background-repeat: no-repeat;
   }
 }
 
@@ -565,7 +668,7 @@ a {
   outline: none;
   font-weight: bolder;
   padding: 15px 20px;
-  border-radius: 10px;
+  border-radius: 10px !important;
 }
 
 .form-wraper form input[type="email"] {
@@ -587,6 +690,15 @@ a {
   width: 180px;
   color: white;
   background: linear-gradient(180deg, #ff946d 0%, #ff7d68 100%);
+}
+
+@media (max-width: 767px) {
+  .form-wraper input[type="email"] {
+    max-width: 170px !important;
+  }
+  .form-wraper input[type="submit"] {
+    width: 100px !important;
+  }
 }
 
 @media (max-width: 991px) {
@@ -639,6 +751,12 @@ footer .social li a {
   border-radius: 50%;
   color: black !important;
   box-shadow: 0px 2px 20px #0000001a;
+  transition: all ease-in .3s;
+}
+
+footer .social li:hover a {
+  color: white !important;
+  background-color: black;
 }
 
 footer .social + p {

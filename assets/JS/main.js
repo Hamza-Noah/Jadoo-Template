@@ -8,15 +8,16 @@ $(".category-carousel").owlCarousel({
       nav: false,
       dots: false,
     },
-    600: {
-      items: 1,
+    768: {
+      items: 2,
       nav: false,
       dots: false,
     },
     1000: {
       items: 4,
-      nav: true,
+      nav: false,
       loop: false,
+      dots: false,
     },
   },
 });
@@ -44,19 +45,18 @@ $(".destination-carousel").owlCarousel({
   },
 });
 
-
 $("#brands-carousel").owlCarousel({
   loop: true,
   margin: 10,
   responsiveClass: true,
   responsive: {
     0: {
-      items: 1,
+      items: 2,
       nav: false,
       dots: false,
     },
     600: {
-      items: 2,
+      items: 3,
       nav: false,
       dots: false,
     },

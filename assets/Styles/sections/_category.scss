@@ -1,7 +1,9 @@
 .category {
+  margin: 100px 0 20px;
   background-image: url(../images/category.png);
   background-repeat: no-repeat;
   background-position: 95% top;
+  overflow: auto;
   .head-section {
     p {
       color: $text-color;
@@ -15,11 +17,11 @@
 
   .category-carousel {
     padding: 25px 0;
-    overflow: auto;
+    overflow-x: auto !important;
   }
 
   .item {
-    padding: 50px 0;
+    padding: 100px 20px;
   }
 
   .card {
@@ -46,6 +48,34 @@
 
     p {
       color: $text-color;
+    }
+  }
+}
+
+.category {
+  @media (max-width: 991px) {
+    .owl-item .item .card {
+      border: solid 0.1px $text-color !important;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .owl-item .item .card {
+      width: 300px;
+      margin: auto;
+      // border: none !important;
+      box-shadow: 0px 52px 46px #00000012;
+    }
+
+    .owl-item .item .card:hover {
+      box-shadow: 0px 72px 46px #00000012;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .owl-item .item .card {
+      width: 267px;
+      border: none !important;
     }
   }
 }

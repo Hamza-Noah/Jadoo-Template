@@ -1,15 +1,32 @@
-.navbar{
-    background-color: transparent !important;
-    .nav-item{
-      color: black;
-    &:not(:last-child){
+.navbar {
+  background-color: transparent !important;
+  .nav-item {
+    .nav-link {
+      color: black !important;
+    }
+    &:not(:last-child) {
       margin-right: 50px;
     }
-    }
+  }
 }
 
 @media (max-width: 991px) {
   .navbar-collapse {
+    top: 50px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #fff1da;
+    position: absolute;
     margin-top: 50px;
+
+    li {
+      padding-left: 20px;
+    }
+    li a {
+      display: block;
+      padding: 20px;
+      font-weight: bolder;
+    }
   }
 }
