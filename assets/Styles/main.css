@@ -8,6 +8,10 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 .owl-carousel .owl-item .item .card {
   border: none !important;
 }
@@ -37,7 +41,6 @@ body {
 .landing {
   padding-top: 100px;
   margin-top: -60px;
-  height: calc(100vh + 60px);
   background-image: url("../images/SVG/landing-Decore.svg");
   background-position: 120% -70px;
   background-size: contain;
@@ -69,9 +72,9 @@ body {
   background-image: url("../images/SVG/landing-text-Decore.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: -80px center;
-  height: 100%;
-  width: 200%;
+  top: 50%;
+  height: 50px;
+  width: 150%;
   z-index: -1;
 }
 
@@ -593,5 +596,60 @@ body {
   .form-wraper input[type="submit"] {
     width: 130px;
   }
+}
+
+footer h3 {
+  font-weight: bolder;
+}
+
+footer h3 + p {
+  padding-right: 20px;
+  font-size: 14px;
+  color: #5E6282;
+}
+
+footer h5 {
+  color: #14183e;
+  font-weight: 800;
+}
+
+footer h5 + ul {
+  margin-top: 30px;
+}
+
+footer h5 + ul li {
+  margin-bottom: 10px;
+}
+
+footer ul:not(ul.social) a {
+  color: #5E6282 !important;
+  font-weight: 600;
+}
+
+footer .social {
+  margin-bottom: 20px;
+}
+
+footer .social li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  color: black !important;
+  box-shadow: 0px 2px 20px #0000001a;
+}
+
+footer .social + p {
+  color: #5E6282;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+footer .rights {
+  color: #5E6282;
+  font-weight: bolder;
 }
 /*# sourceMappingURL=main.css.map */

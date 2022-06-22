@@ -8,9 +8,12 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 .owl-carousel .owl-item {
-  
-   .item .card {
+  .item .card {
     border: none !important;
   }
 
@@ -27,3 +30,4 @@ body {
 @import "sections/trip";
 @import "sections/testimonials";
 @import "sections/form";
+@import "sections/footer";

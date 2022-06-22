@@ -1,7 +1,6 @@
 .landing {
   padding-top: 100px;
   margin-top: -60px;
-  height: calc(100vh + 60px);
   background-image: url("../images/SVG/landing-Decore.svg");
   background-position: 120% -70px;
   background-size: contain;
@@ -29,9 +28,9 @@
       background-image: url("../images/SVG/landing-text-Decore.svg");
       background-size: contain;
       background-repeat: no-repeat;
-      background-position: -80px center;
-      height: 100%;
-      width: 200%;
+      top: 50%;
+      height: 50px; 
+      width: 150%;
       z-index: -1;
     }
   }
