@@ -1,5 +1,4 @@
 .category {
-  margin: 100px 0;
   background-image: url(../images/category.png);
   background-repeat: no-repeat;
   background-position: 95% top;
@@ -15,7 +14,7 @@
   }
 
   .category-carousel {
-    padding: 50px 0;
+    padding: 25px 0;
     overflow: auto;
   }
 
@@ -31,6 +30,7 @@
     border-radius: 36px;
     height: 314px;
     text-align: center;
+    transition: all ease-in 0.3s;
 
     .img {
       position: relative;

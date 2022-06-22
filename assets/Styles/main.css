@@ -166,7 +166,6 @@ body {
 }
 
 .category {
-  margin: 100px 0;
   background-image: url(../images/category.png);
   background-repeat: no-repeat;
   background-position: 95% top;
@@ -183,7 +182,7 @@ body {
 }
 
 .category .category-carousel {
-  padding: 50px 0;
+  padding: 25px 0;
   overflow: auto;
 }
 
@@ -199,6 +198,7 @@ body {
   border-radius: 36px;
   height: 314px;
   text-align: center;
+  transition: all ease-in 0.3s;
 }
 
 .category .card .img {
@@ -510,17 +510,88 @@ body {
 }
 
 .form {
-  background-color: #dfd7f9;
-  border-radius: 20px;
-  padding: 80px 153px;
+  padding: 100px 0;
+  background-image: url(../images/category.png);
+  background-repeat: no-repeat;
+  background-position: 95% bottom;
 }
 
-.form h2 {
+.form .form-wraper {
+  position: relative;
+  border-radius: 20px;
+  padding: 80px 153px;
+  background-image: url("../images/SVG/form-decor-left.svg");
+  background-position: -150px 50px;
+  background-repeat: no-repeat;
+  background-color: #dfd7f9;
+  overflow: hidden;
+}
+
+.form .form-wraper h2 {
   color: #5e6282;
   margin-bottom: 40px;
 }
 
-.form .form input[type=email] {
-  background-color: red;
+.form .form-wraper h2::after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/SVG/form-decor-right.svg");
+  top: -10px;
+  height: 200px;
+  width: 300px;
+}
+
+@media (max-width: 991px) {
+  .form .form-wraper {
+    padding: 50px;
+  }
+}
+
+.form-wraper form {
+  display: flex;
+  justify-content: center;
+}
+
+.form-wraper form .input-group {
+  background-color: transparent;
+  width: fit-content;
+}
+
+.form-wraper form input {
+  border: none;
+  outline: none;
+  font-weight: bolder;
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+
+.form-wraper form input[type="email"] {
+  display: inline-block;
+  width: 421px;
+  padding-left: 50px;
+  background-color: white !important;
+}
+
+.form-wraper form i {
+  color: #5E6282;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+}
+
+.form-wraper form input[type="submit"] {
+  text-align: center;
+  width: 180px;
+  color: white;
+  background: linear-gradient(180deg, #ff946d 0%, #ff7d68 100%);
+}
+
+@media (max-width: 991px) {
+  .form-wraper input[type="email"] {
+    max-width: 200px;
+  }
+  .form-wraper input[type="submit"] {
+    width: 130px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
