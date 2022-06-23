@@ -75,6 +75,16 @@ $(document).ready(function () {
   });
 });
 
+let bar = document.querySelector("#progress-bar");
+let barValue = document.querySelector("#progress-bar-value").innerHTML;
+let progress = document.getElementById("progress");
+
+bar.style.cssText =
+  " height: 10px; width: 150px; border-radius: 5px; margin-top: 15px; background-color: #F5F5F5;";
+
+  progress.style.cssText = `height: 100%; width: ${barValue}%; border-radius: 5px; background-color: #8A79DF `
+
+
 let firstTestimonial = document.querySelector(".testimonial:first-child");
 let secondTestimonial = document.querySelector(".testimonial:last-child");
 

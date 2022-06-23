@@ -30,7 +30,6 @@
     align-items: center;
     padding: 45px;
     border-radius: 36px;
-    height: 314px;
     text-align: center;
     transition: all ease-in 0.3s;
 
@@ -74,8 +73,23 @@
 
   @media (min-width: 992px) {
     .owl-item .item .card {
-      width: 267px;
+      // width: 267px;
+      height: 347px;
       border: none !important;
+    }
+  }
+
+  @media (min-width: 1300px) {
+    .container {
+      .category-carousel {
+        width: auto;
+        margin: 0 -100px;
+        padding: 0 100px;
+        overflow: hidden;
+      }
+      .owl-stage-outer {
+        overflow: visible;
+      }
     }
   }
 }
@@ -120,7 +134,7 @@
     background-color: $red-color;
     height: 100px;
     width: 100px;
-    transition: all ease-in .3s;
+    transition: all ease-in 0.3s;
     opacity: 0;
     z-index: -1;
   }
