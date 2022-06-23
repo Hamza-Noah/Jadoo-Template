@@ -572,6 +572,18 @@ a {
   font-weight: 800;
 }
 
+.testimonials .dots li button {
+  background-color: #e5e5e5;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.testimonials .dots li.active button {
+  background-color: #39425d;
+}
+
 .testimonials .testimonial {
   padding: 30px;
   border-radius: 10px;
@@ -621,6 +633,11 @@ a {
   margin-top: auto;
   margin-bottom: auto;
   height: 200px;
+}
+
+.testimonials ul button {
+  border: none;
+  background: none;
 }
 
 .testimonials ul li {
