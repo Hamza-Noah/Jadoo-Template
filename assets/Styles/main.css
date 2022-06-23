@@ -662,7 +662,7 @@ a {
     transform: scale(0.8) translateY(-110%) !important;
   }
   .testimonials ul {
-    display: none;
+    display: none !important;
   }
 }
 
