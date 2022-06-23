@@ -52,17 +52,17 @@
 
 .destinations {
   @media (max-width: 991px) {
-    .card{
+    .card {
       margin: auto;
     }
   }
-
 }
 @media (min-width: 992px) {
   .owl-item:last-child .card {
     position: relative;
   }
-  .owl-item:last-child .card::after {
+
+  .destinations .owl-item:last-child .card::after {
     content: "";
     position: absolute;
     right: -20%;

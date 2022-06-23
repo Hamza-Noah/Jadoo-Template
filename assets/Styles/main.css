@@ -127,6 +127,9 @@ a {
 }
 
 @media (max-width: 767px) {
+  .landing h1 {
+    font-size: 3rem;
+  }
   .landing .holder {
     justify-content: center;
   }
@@ -299,15 +302,11 @@ a {
 
 .category .owl-item:last-child .card .img::before {
   top: 20px;
+  right: -100%;
   width: 45px;
 }
 
-.category .card:hover {
-  position: relative;
-  box-shadow: 0px 52px 46px #00000012;
-}
-
-.category .card:hover::after {
+.category .card::after {
   content: "";
   position: absolute;
   bottom: -50px;
@@ -316,7 +315,18 @@ a {
   background-color: #DF6951;
   height: 100px;
   width: 100px;
+  transition: all ease-in .3s;
+  opacity: 0;
   z-index: -1;
+}
+
+.category .card:hover {
+  position: relative;
+  box-shadow: 0px 52px 46px #00000012;
+}
+
+.category .card:hover::after {
+  opacity: 1;
 }
 
 .destinations .head-section p {
@@ -381,7 +391,7 @@ a {
   .owl-item:last-child .card {
     position: relative;
   }
-  .owl-item:last-child .card::after {
+  .destinations .owl-item:last-child .card::after {
     content: "";
     position: absolute;
     right: -20%;
@@ -441,7 +451,6 @@ a {
   }
   .trip .trip-card {
     margin: auto;
-    max-width: 400px;
   }
 }
 
@@ -556,6 +565,8 @@ a {
   border-radius: 10px;
   box-shadow: 0px 12px 26px #0000001a;
   background-color: white;
+  transition: all ease-in 0.3s;
+  z-index: 1;
 }
 
 .testimonials .testimonial img {
@@ -578,18 +589,18 @@ a {
   font-weight: 800;
 }
 
-.testimonials .testimonial.hidden {
+.testimonials .testimonial.hidden-top {
   background-color: white;
   position: absolute;
-  transform: scale(0.8);
-  top: -120px;
-  z-index: -1;
+  transform: scale(0.8) translateY(60%) !important;
+  z-index: 0;
 }
 
-@media (max-width: 991px) {
-  .testimonials .testimonial {
-    margin: 50px 30px;
-  }
+.testimonials .testimonial.hidden-bottom {
+  background-color: white;
+  position: absolute;
+  transform: scale(0.8) translateY(-60%) !important;
+  z-index: 0;
 }
 
 .testimonials .owl-carousel {
@@ -610,6 +621,26 @@ a {
 
 .testimonials .owl-carousel .owl-item:hover img {
   filter: grayscale(0);
+}
+
+@media (max-width: 991px) {
+  .testimonials .head-section {
+    text-align: center;
+  }
+  .testimonials .testimonial {
+    margin: 50px 30px;
+    max-width: 80%;
+  }
+  .testimonials .testimonial img {
+    width: 45px;
+    height: 45px;
+  }
+  .testimonials .testimonial.hidden-top {
+    transform: scale(0.8) translateY(110%) !important;
+  }
+  .testimonials .testimonial.hidden-bottom {
+    transform: scale(0.8) translateY(-110%) !important;
+  }
 }
 
 .form {
@@ -662,6 +693,8 @@ a {
 @media (max-width: 991px) {
   .form .form-wraper {
     padding: 50px;
+    max-width: 90%;
+    margin: auto;
   }
 }
 

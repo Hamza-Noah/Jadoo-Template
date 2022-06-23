@@ -22,6 +22,7 @@
       display: inline-block;
       padding: 0 15px;
     }
+    
     span::before {
       content: "";
       position: absolute;
@@ -69,6 +70,11 @@
   }
 
   @media (max-width: 767px) {
+
+    h1{
+      font-size: 3rem;
+    }
+
     .holder {
       justify-content: center;
     }
