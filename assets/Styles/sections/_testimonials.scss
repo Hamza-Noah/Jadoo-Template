@@ -55,7 +55,7 @@
 
 .testimonials {
   .owl-carousel {
-    margin-top: 200px;
+    margin-top: 300px !important;
     .owl-item .img {
       display: flex;
       align-items: center;
@@ -65,12 +65,11 @@
     .owl-item img {
       filter: grayscale(1);
       width: 120px !important;
-      transition: all ease-in .3s;
+      transition: all ease-in 0.3s;
     }
 
     .owl-item:hover img {
       filter: grayscale(0);
-
     }
   }
 }

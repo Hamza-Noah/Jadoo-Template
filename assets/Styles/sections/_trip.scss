@@ -36,8 +36,12 @@
   }
 
   @media (max-width: 991px) {
+    .procedures {
+      margin-bottom: 50px;
+    }
+
     .info {
-      padding: 0 40px;
+      padding: 0 10px 0 0;
     }
 
     .trip-card {
@@ -132,6 +136,7 @@
 
   @media (max-width: 991px) {
     .trip-card {
+      max-width: 100%;
       padding-bottom: 100px !important;
     }
 

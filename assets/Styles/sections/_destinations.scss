@@ -52,24 +52,26 @@
 
 .destinations {
   @media (max-width: 991px) {
-  
+    .card{
+      margin: auto;
     }
   }
-  @media (min-width: 992px) {
-    .owl-item:last-child .card {
-      position: relative;
-    }
-    .owl-item:last-child .card::after {
-      content: "";
-      position: absolute;
-      right: -20%;
-      top: 50%;
-      transform: translateY(-50%);
-      height: 250px;
-      width: 100px;
-      background-image: url("../images/SVG/Decore.svg");
-      background-size: cover;
-      z-index: -1;
-    }
+
+}
+@media (min-width: 992px) {
+  .owl-item:last-child .card {
+    position: relative;
+  }
+  .owl-item:last-child .card::after {
+    content: "";
+    position: absolute;
+    right: -20%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 250px;
+    width: 100px;
+    background-image: url("../images/SVG/Decore.svg");
+    background-size: cover;
+    z-index: -1;
   }
 }

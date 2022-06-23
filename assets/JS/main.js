@@ -51,11 +51,16 @@ $("#brands-carousel").owlCarousel({
   responsiveClass: true,
   responsive: {
     0: {
+      items: 1,
+      nav: false,
+      dots: false,
+    },
+    567: {
       items: 2,
       nav: false,
       dots: false,
     },
-    600: {
+    767: {
       items: 3,
       nav: false,
       dots: false,

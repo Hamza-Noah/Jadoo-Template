@@ -100,7 +100,7 @@ a {
 
 .landing a {
   margin-right: 44px;
-  padding: 25px 30px;
+  padding: 20px 30px;
   border-radius: 10px;
   text-decoration: none;
   background-color: #F1A501;
@@ -378,10 +378,10 @@ a {
 }
 
 @media (min-width: 992px) {
-  .destinations .owl-item:last-child .card {
+  .owl-item:last-child .card {
     position: relative;
   }
-  .destinations .owl-item:last-child .card::after {
+  .owl-item:last-child .card::after {
     content: "";
     position: absolute;
     right: -20%;
@@ -433,8 +433,11 @@ a {
 }
 
 @media (max-width: 991px) {
+  .trip .procedures {
+    margin-bottom: 50px;
+  }
   .trip .info {
-    padding: 0 40px;
+    padding: 0 10px 0 0;
   }
   .trip .trip-card {
     margin: auto;
@@ -525,6 +528,7 @@ a {
 
 @media (max-width: 991px) {
   .trip .trip-card {
+    max-width: 100%;
     padding-bottom: 100px !important;
   }
   .trip .trip-destination {
@@ -589,7 +593,7 @@ a {
 }
 
 .testimonials .owl-carousel {
-  margin-top: 200px;
+  margin-top: 300px !important;
 }
 
 .testimonials .owl-carousel .owl-item .img {
@@ -601,7 +605,7 @@ a {
 .testimonials .owl-carousel .owl-item img {
   filter: grayscale(1);
   width: 120px !important;
-  transition: all ease-in .3s;
+  transition: all ease-in 0.3s;
 }
 
 .testimonials .owl-carousel .owl-item:hover img {
@@ -620,7 +624,6 @@ a {
   border-radius: 120px 20px 20px;
   padding: 80px 153px;
   background-color: rgba(223, 215, 249, 0.2);
-  overflow: hidden;
   z-index: 4;
 }
 
@@ -637,6 +640,23 @@ a {
   right: -25px;
   height: 324px;
   width: 300px;
+}
+
+.form .form-wraper::after {
+  content: "\f1d8";
+  position: absolute;
+  right: -20px;
+  top: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-family: "Font Awesome 5 free";
+  font-size: 25px;
+  background-color: rebeccapurple;
+  color: white;
 }
 
 @media (max-width: 991px) {
