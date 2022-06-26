@@ -1,0 +1,131 @@
+.testimonials {
+  margin: 50px 0 0;
+  .head-section {
+    p {
+      color: $text-color;
+      font-weight: bolder;
+    }
+    h2 {
+      color: $heading-color;
+      font-weight: 800;
+    }
+  }
+
+  .dots li button {
+    background-color: #e5e5e5;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+
+  .dots li.active button {
+    background-color: #39425d;
+  }
+
+  .testimonial {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 12px 26px #0000001a;
+    background-color: white !important;
+    transition: all ease-in 0.3s;
+    z-index: 1;
+    img {
+      top: -30px;
+      left: -30px;
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+    }
+
+    p {
+      color: $text-color;
+    }
+
+    p:first-child {
+      line-height: 1.7;
+    }
+
+    p.client-name {
+      font-weight: 800;
+    }
+  }
+
+  .testimonial.hidden-top {
+    background-color: transparent;
+    position: absolute;
+    border: 2px solid #f7f7f7;
+    transform: scale(0.8) translateY(60%) !important;
+    z-index: 0;
+  }
+
+  .testimonial.hidden-bottom {
+    background-color: transparent;
+    position: absolute;
+    border: 2px solid #f7f7f7;
+    transform: scale(0.8) translateY(-60%) !important;
+    z-index: 0;
+  }
+
+  ul {
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 200px;
+
+    button {
+      border: none;
+      background: none;
+    }
+
+    li {
+      cursor: pointer;
+    }
+  }
+}
+
+.testimonials {
+  .owl-carousel {
+    .owl-item .img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .owl-item img {
+      filter: grayscale(1);
+      width: 120px !important;
+      transition: all ease-in 0.3s;
+    }
+
+    .owl-item:hover img {
+      filter: grayscale(0);
+    }
+  }
+
+  @media (max-width: 991px) {
+    .head-section {
+      text-align: center;
+    }
+
+    .testimonial {
+      margin: 50px auto;
+      max-width: 80%;
+    }
+
+    .testimonial img {
+      width: 45px;
+      height: 45px;
+    }
+
+    .testimonial.hidden-top {
+      transform: scale(0.8) translateY(110%) !important;
+    }
+
+    .testimonial.hidden-bottom {
+      transform: scale(0.8) translateY(-110%) !important;
+    }
+    ul {
+      display: none !important;
+    }
+  }
+}

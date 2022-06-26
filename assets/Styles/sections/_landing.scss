@@ -1,0 +1,198 @@
+.landing {
+  position: relative;
+  padding-top: 100px;
+  margin: -90px 0 50px;
+  background-image: url("../images/SVG/landing-Decore.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  p:first-child {
+    margin-bottom: 20px;
+    color: $red-color;
+    font-weight: 800;
+  }
+
+  h1 {
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 4rem;
+    font-weight: 800;
+    span {
+      position: relative;
+      display: inline-block;
+      padding: 0 15px;
+      z-index: 2;
+    }
+
+    span::before {
+      content: "";
+      position: absolute;
+      background-image: url("../images/SVG/landing-text-Decore.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      top: 50%;
+      height: 50px;
+      width: 150%;
+      z-index: -1;
+    }
+  }
+
+  p:not(:first-child) {
+    margin-top: 30px;
+    color: $text-color;
+    line-height: 1.8;
+  }
+
+  a {
+    margin-right: 44px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: $yellow-color;
+    color: white;
+  }
+
+  a + button {
+    background-color: transparent !important;
+    color: $text-color !important ;
+    font-weight: bolder;
+    border: none;
+    i {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background-color: $red-color;
+      color: white;
+    }
+  }
+}
+
+.landing {
+  @media (max-width: 576px) {
+    & {
+      background-position: 80px -20px !important;
+    }
+  }
+
+  @media (max-width: 767px) {
+    & {
+      background-position: 190px -150px;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    .holder {
+      flex-direction: column;
+    }
+
+    a {
+      margin: 20px 0;
+    }
+
+    button {
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 991px) {
+    & {
+      background-position: 120% -200px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    & {
+      background-position: 120% -140px ;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-50%);
+      background-image: url(../images/Ellipse.png);
+      background-position: top center;
+      background-size: 500px 500px;
+      background-repeat: no-repeat;
+      height: 500px;
+      width: 500px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    & {
+      background-position: 105% -150px ;
+    }
+  }
+}
+
+.landing {
+  .plane:first-child img {
+    top: 150px;
+    animation: fly 15s infinite;
+  }
+
+  .plane:last-child img {
+    top: 200px;
+    right: 0;
+    animation: fly2 15s infinite;
+    animation-delay: 3s;
+  }
+
+  @keyframes fly {
+    0% {
+      top: 0px;
+      left: 0px;
+    }
+    25% {
+      left: 100px;
+      top: 200px;
+    }
+    50% {
+      left: 50px;
+      top: 100px;
+    }
+    75% {
+      top: 200px;
+    }
+    100% {
+      top: 0px;
+      left: 0;
+    }
+  }
+
+  @keyframes fly2 {
+    0% {
+      top: 0px;
+      right: 0px;
+    }
+
+    25% {
+      top: 200px;
+      right: 100px;
+    }
+
+    50% {
+      top: 100px;
+      right: 50px;
+    }
+
+    75% {
+      top: 200px;
+      right: 50px;
+    }
+
+    100% {
+      top: 0px;
+      right: 0px;
+    }
+  }
+}

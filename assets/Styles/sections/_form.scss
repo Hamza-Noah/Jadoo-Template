@@ -1,0 +1,127 @@
+.form {
+  padding: 100px 0;
+  background-image: url(../images/category.png);
+  background-repeat: no-repeat;
+  background-position: 90% 92%;
+  bottom: 0;
+
+  .form-wraper {
+    position: relative;
+    border-radius: 120px 20px 20px;
+    padding: 80px 153px;
+    background-color: #f9f7fe;
+    z-index: 4;
+    h2 {
+      color: #5e6282;
+      margin-bottom: 40px;
+    }
+
+    h2::after {
+      content: "";
+      position: absolute;
+      background-image: url("../images/SVG/form-decor-right.svg");
+      top: 2px;
+      right: -25px;
+      height: 324px;
+      width: 300px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -20px;
+      top: -10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-image: url("../images/SVG/send.svg");
+      background-repeat: no-repeat;
+      background-color: rebeccapurple;
+      background-position: center;
+      background-size: 33px 33px;
+      color: white;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .form-wraper {
+      padding: 50px;
+      max-width: 90%;
+      margin: auto;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .form-wraper::before {
+      content: "";
+      position: absolute;
+      height: 401px;
+      width: 400px;
+      bottom: 0px;
+      background-image: url(../images/SVG/form-decor-left.svg);
+      background-size: 400px 331px;
+      background-position: left 100px;
+      background-repeat: no-repeat;
+      left: -50px !important;
+    }
+  }
+}
+
+.form-wraper {
+  form {
+    display: flex;
+    justify-content: center;
+
+    .input-group {
+      background-color: transparent;
+      width: fit-content;
+    }
+
+    input {
+      border: none;
+      outline: none;
+      font-weight: bolder;
+      padding: 15px 20px;
+      border-radius: 10px !important;
+    }
+
+    input[type="email"] {
+      display: inline-block !important;
+      width: 421px;
+      padding-left: 50px !important;
+      background-color: white !important;
+    }
+
+    i {
+      color: $text-color;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 20px;
+    }
+
+    input[type="submit"] {
+      text-align: center;
+      width: 180px;
+      color: white;
+      background: linear-gradient(180deg, #ff946d 0%, #ff7d68 100%);
+    }
+  }
+
+  @media (max-width: 991px) {
+    form {
+      flex-direction: column;
+    }
+
+    form div,
+    form input {
+      width: 100% !important;
+    }
+
+    form div {
+      margin-bottom: 20px;
+    }
+  }
+}
