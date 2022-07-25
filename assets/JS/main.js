@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
   $(".category-carousel").owlCarousel({
     loop: true,
@@ -38,13 +39,13 @@ $(document).ready(function () {
         nav: false,
         dots: true,
       },
-      
+
       900: {
         items: 2,
         nav: false,
         dots: true,
       },
-      
+
       1200: {
         items: 3,
         nav: true,
@@ -82,9 +83,7 @@ $(document).ready(function () {
   });
 });
 
-
-// Testimonial
-
+// Trip
 
 let bar = document.querySelector("#progress-bar");
 let barValue = document.querySelector("#progress-bar-value").innerHTML;
@@ -95,56 +94,137 @@ bar.style.cssText =
 
 progress.style.cssText = `height: 100%; width: ${barValue}%; border-radius: 5px; background-color: #8A79DF `;
 
-let firstTestimonial = document.querySelector(".testimonial:first-child");
-let secondTestimonial = document.querySelector(".testimonial:last-child");
-let btnPrevious = document.getElementById("next-testimonial");
-let btnNext = document.getElementById("previous-testimonial");
-let dotNext = document.getElementById("next-test");
-let dotPrev = document.getElementById("prev-test");
+// Testimonials
 
-btnNext.addEventListener("click", function () {
-  firstTestimonial.classList.add("hidden-top");
-  secondTestimonial.classList.remove("hidden-bottom");
-  btnNext.setAttribute("disabled");
-  btnPrevious.removeAttribute("disabled");
+let testimonials = Array.from(document.querySelectorAll(".testimonial"));
+let shownTestimonial = document.querySelector(".active-top");
+
+testimonials.forEach((testimonial, index) => {
+  testimonial.addEventListener("click", function () {
+    if (testimonial.classList.contains("active-bottom")) {
+      $(".active-top").addClass("hidden");
+      $(".active-top").removeClass("active-top");
+      $(".test-nav").removeClass("active");
+
+      testimonial.classList.remove("active-bottom");
+      testimonial.classList.add("active-top");
+
+      if (index < 4) {
+        testimonial.nextElementSibling.classList.remove("hidden");
+        testimonial.nextElementSibling.classList.add("active-bottom");
+        dotsArr[index].classList.add("active");
+      } else {
+        testimonials[0].classList.remove("hidden");
+        testimonials[0].classList.add("active-bottom");
+        dotsArr[index].classList.add("active");
+      }
+    }
+  });
 });
 
-btnPrevious.addEventListener("click", function () {
-  firstTestimonial.classList.remove("hidden-top");
-  secondTestimonial.classList.add("hidden-bottom");
-  btnPrevious.setAttribute("disabled");
-  btnNext.removeAttribute("disabled");
+let dotsArr = Array.from(document.querySelectorAll(".test-nav"));
+
+dotsArr.forEach((dot, index) => {
+  dot.addEventListener("click", function () {
+    $(".testimonial").addClass("hidden");
+    $(".testimonial").removeClass("active-top");
+    $(".active-bottom").removeClass("active-bottom");
+    $(".test-nav").removeClass("active");
+
+    testimonials[index].classList.add("active-top");
+    testimonials[index].classList.remove("hidden");
+
+    if (index < 4) {
+      testimonials[index + 1].classList.remove("hidden");
+      testimonials[index + 1].classList.add("active-bottom");
+    } else {
+      testimonials[0].classList.remove("hidden");
+      testimonials[0].classList.add("active-bottom");
+    }
+
+    dot.classList.add("active");
+  });
 });
 
-dotNext.addEventListener("click", function () {
-  firstTestimonial.classList.add("hidden-top");
-  secondTestimonial.classList.remove("hidden-bottom");
-  dotNext.removeAttribute("disabled");
-  dotPrev.setAttribute("disabled");
-  dotNext.classList.add("active");
-  dotPrev.classList.remove("active")
+let nextTestimonial = document.getElementById("next-testimonial");
+let previousTestimonial = document.getElementById("previous-testimonial");
+let testIndex = 0;
+
+nextTestimonial.addEventListener("click", function () {
+  testimonials.forEach((testimonial, index) => {
+    if (testimonials[index].classList.contains("active-top")) {
+      testIndex = index;
+
+      $(".testimonial").addClass("hidden");
+      $(".testimonial").removeClass("active-top");
+      $(".active-bottom").removeClass("active-bottom");
+      $(".test-nav").removeClass("active");
+    }
+  });
+
+  if (testIndex < 3) {
+    testimonials[testIndex + 1].classList.replace("hidden", "active-top");
+    testimonials[testIndex + 2].classList.replace("hidden", "active-bottom");
+    dotsArr[testIndex + 1].classList.add("active");
+  } else if (testIndex == 3) {
+    testimonials[testIndex + 1].classList.replace("hidden", "active-top");
+    testimonials[0].classList.replace("hidden", "active-bottom");
+    dotsArr[testIndex + 1].classList.add("active");
+  } else {
+    testimonials[0].classList.replace("hidden", "active-top");
+    testimonials[1].classList.replace("hidden", "active-bottom");
+    dotsArr[0].classList.add("active");
+  }
 });
 
-dotPrev.addEventListener("click", function () {
-  firstTestimonial.classList.remove("hidden-top");
-  secondTestimonial.classList.add("hidden-bottom");
-  dotNext.setAttribute("disabled");
-  dotPrev.removeAttribute("disabled");
-  dotPrev.classList.add("active");
-  dotNext.classList.remove("active")
-});
+previousTestimonial.addEventListener("click", function () {
+  testimonials
+    .slice()
+    .reverse()
+    .forEach((testimonial, index) => {
+      if (testimonials[index].classList.contains("active-top")) {
+        testIndex = index;
 
-firstTestimonial.addEventListener("click", function () {
-  firstTestimonial.classList.remove("hidden-top");
-  secondTestimonial.classList.add("hidden-bottom");
-});
+        $(".testimonial").addClass("hidden");
+        $(".testimonial").removeClass("active-top");
+        $(".active-bottom").removeClass("active-bottom");
+        $(".test-nav").removeClass("active");
+      }
+    });
 
-secondTestimonial.addEventListener("click", function () {
-  secondTestimonial.classList.remove("hidden-bottom");
-  firstTestimonial.classList.add("hidden-top");
+  if (testIndex > 0) {
+    testimonials[testIndex - 1].classList.replace("hidden", "active-top");
+    testimonials[testIndex].classList.replace("hidden", "active-bottom");
+    dotsArr[testIndex - 1].classList.add("active");
+  } else if (testIndex == 0) {
+    testimonials[4].classList.replace("hidden", "active-top");
+    testimonials[testIndex].classList.replace("hidden", "active-bottom");
+    dotsArr[4].classList.add("active");
+  }
 });
-
 
 // Form Validation
+
+let form = document.getElementById("form");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  let email = document.getElementById("email");
+  let emailValidation =
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  let notValid = document.querySelector(".invalid-feedback");
+  let valid = document.querySelector(".valid-feedback");
+
+  if (emailValidation.test(email.value)) {
+    console.log(email.value);
+    valid.style.cssText =
+      "display: block; position: absolute; bottom: -30px; left: 10px";
+    notValid.style.cssText = "display: none;";
+  } else {
+    notValid.style.cssText =
+      "display: block; position: absolute; bottom: -30px; left: 10px";
+    valid.style.cssText = "display: none;";
+  }
+});
 
 

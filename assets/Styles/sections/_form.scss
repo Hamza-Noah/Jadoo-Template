@@ -27,21 +27,18 @@
     }
 
     &::after {
-      content: "";
+      content: url("../images/SVG/send.svg");
       position: absolute;
       right: -20px;
       top: -10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      background-image: url("../images/SVG/send.svg");
-      background-repeat: no-repeat;
-      background-color: rebeccapurple;
-      background-position: center;
-      background-size: 33px 33px;
+      padding: 30px;
+      background-image: linear-gradient(216deg, #747def 0%, #5e3be1 100%);
       color: white;
     }
   }
@@ -58,14 +55,15 @@
     .form-wraper::before {
       content: "";
       position: absolute;
-      height: 401px;
+      height: 500px;
       width: 400px;
-      bottom: 0px;
       background-image: url(../images/SVG/form-decor-left.svg);
-      background-size: 400px 331px;
-      background-position: left 100px;
+      background-size: 400px;
+      background-position: 30px 100% ;
       background-repeat: no-repeat;
-      left: -50px !important;
+      left: 0px !important;
+      bottom: 0px;
+
     }
   }
 }

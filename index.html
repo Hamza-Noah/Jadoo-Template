@@ -339,7 +339,7 @@
                            <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="trip-destination position-absolute d-flex">
-                           <div class="img pe-3">
+                           <div class="img pe-3 pb-3">
                               <img src="assets/images/trip-rating.jpg" alt="">
                            </div>
                            <div class="info">
@@ -368,52 +368,100 @@
                         <h2>What People Say</h2>
                      </div>
                      <ul class="list-unstyled d-flex dots mt-5">
-                        <li><button id="prev-test"></button> </li>
-                        <li><button id="next-test"></button> </li>
+                        <li><button  class="active test-nav" id="first-test"></button> </li>
+                        <li><button class="test-nav" id="second-test"></button> </li>
+                        <li><button class="test-nav" id="third-test"></button></li>
+                        <li><button class="test-nav" id="fourth-test"></button></li>
+                        <li><button class="test-nav" id="fifth-test"></button></li>
                      </ul>
                   </div>
                   <div class="col-sm-12 col-md-12 col-lg-6">
                      <div class="d-flex">
-                        <div class="wraper m-auto">
-                           <div class="testimonial position-relative">
+                        <div class="wraper position-relative m-auto w-100">
+                           <div class="testimonial active-top">
                               <img class="position-absolute" src="assets/images/testimonial.jpg" alt="">
-                              <p class="pb-4">“On the Windows talking painted pasture yet its express parties use.
+                              <p class="pb-4">“1-On the Windows talking painted pasture yet its express parties use.
                                  Sure
                                  last upon
                                  he
                                  same as knew next. Of believed or diverted no.”
                               </p>
                               <p class="client-name">
-                                 Mike taylor
+                                 1-Mike taylor
                               </p>
                               <p class="location">
-                                 Lahore, Pakistan
+                                 1-Lahore, Pakistan
                               </p>
                            </div>
-                           <div class="testimonial position-relative hidden-bottom">
+                           <div class="testimonial active-bottom">
                               <img class="position-absolute" src="assets/images/testimonial.jpg" alt="">
-                              <p class="pb-4">“On the Windows talking painted pasture yet its express parties use.
+                              <p class="pb-4">“2-On the Windows talking painted pasture yet its express parties use.
                                  Sure
                                  last upon
                                  he
                                  same as knew next. Of believed or diverted no.”
                               </p>
                               <p class="client-name">
-                                 Mike taylor
+                                 2-Mike taylor
                               </p>
                               <p class="location">
-                                 Lahore, Pakistan
+                                 2-Lahore, Pakistan
+                              </p>
+                           </div>
+                           <div class="testimonial hidden">
+                              <img class="position-absolute" src="assets/images/testimonial.jpg" alt="">
+                              <p class="pb-4">“3-On the Windows talking painted pasture yet its express parties use.
+                                 Sure
+                                 last upon
+                                 he
+                                 same as knew next. Of believed or diverted no.”
+                              </p>
+                              <p class="client-name">
+                                 3-John Doe
+                              </p>
+                              <p class="location">
+                                 3-Lahore, Pakistan
+                              </p>
+                           </div>
+                           <div class="testimonial hidden">
+                              <img class="position-absolute" src="assets/images/testimonial.jpg" alt="">
+                              <p class="pb-4">“4-On the Windows talking painted pasture yet its express parties use.
+                                 Sure
+                                 last upon
+                                 he
+                                 same as knew next. Of believed or diverted no.”
+                              </p>
+                              <p class="client-name">
+                                 4-Mike taylor
+                              </p>
+                              <p class="location">
+                                 4-Lahore, Pakistan
+                              </p>
+                           </div>
+                           <div class="testimonial hidden">
+                              <img class="position-absolute" src="assets/images/testimonial.jpg" alt="">
+                              <p class="pb-4">“5-On the Windows talking painted pasture yet its express parties use.
+                                 Sure
+                                 last upon
+                                 he
+                                 same as knew next. Of believed or diverted no.”
+                              </p>
+                              <p class="client-name">
+                                 5-Mike taylor
+                              </p>
+                              <p class="location">
+                                 5-Lahore, Pakistan
                               </p>
                            </div>
                         </div>
                         <ul class="ps-5 list-unstyled d-flex flex-column justify-content-between">
                            <li>
-                              <button id="next-testimonial">
-                              <img src="assets/images/SVG/arrow-top.svg" alt="">
+                              <button class="arrow" id="previous-testimonial">
+                                 <img src="assets/images/SVG/arrow-top.svg" alt="">
                               </button>
                            </li>
                            <li>
-                              <button id="previous-testimonial">
+                              <button class="arrow active" id="next-testimonial">
                               <img src="assets/images/SVG/arrow-down.svg" alt="">
                               </button>
                            </li>
@@ -458,12 +506,12 @@
                   <h2 class="text-center fw-bolder">
                      Subscribe to get information, latest news and other interesting offers about Cobham
                   </h2>
-                  <form action="">
+                  <form action="" id="form">
                      <div class="input-group me-2">
                         <i class="fa-regular fa-envelope position-absolute"></i>
-                        <input type="email" placeholder="Your Email">
-                        <div class="valid-feedback">Valid.</div>
-                        <div class="invalid-feedback">Please fill out this field.</div>
+                        <input type="email" id="email" placeholder="Your Email">
+                        <div class="valid-feedback">The email address is valid.</div>
+                        <div class="invalid-feedback">The email address is not valid</div>
                      </div>
                      <div class="input-group ms-1">
                         <input type="submit">

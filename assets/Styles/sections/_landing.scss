@@ -1,7 +1,7 @@
 .landing {
   position: relative;
   padding-top: 100px;
-  margin: -90px 0 50px;
+  margin: -65px 0 50px;
   background-image: url("../images/SVG/landing-Decore.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -75,7 +75,7 @@
 .landing {
   @media (max-width: 576px) {
     & {
-      background-position: 80px -20px !important;
+      background-position: 80px -50px !important;
     }
   }
 
@@ -109,7 +109,8 @@
 
   @media (min-width: 992px) {
     & {
-      background-position: 120% -140px ;
+      margin: -90px 0 50px;
+      background-position: 120% -140px;
     }
 
     &::before {
@@ -129,7 +130,7 @@
 
   @media (min-width: 1200px) {
     & {
-      background-position: 105% -150px ;
+      background-position: 105% -150px;
     }
   }
 }

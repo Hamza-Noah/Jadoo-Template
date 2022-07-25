@@ -3,12 +3,14 @@
   background-image: url(../images/category.png);
   background-repeat: no-repeat;
   background-position: 95% top;
-  overflow: auto;
+  // overflow: auto;
+
   .head-section {
     p {
       color: $text-color;
       font-weight: 700;
     }
+
     h2 {
       font-size: 2.5rem;
       font-weight: 700;
@@ -47,6 +49,7 @@
 
     p {
       color: $text-color;
+      line-height: 2;
     }
   }
 }
@@ -54,12 +57,13 @@
 .category {
   @media (max-width: 991px) {
     .owl-item .item .card {
-      border: solid 0.1px $text-color !important;
+      border: solid 0.1px $text-color  !important;
     }
   }
 
   @media (max-width: 991px) {
     .owl-item .item .card {
+      height: 347px;
       width: 300px;
       margin: auto;
       box-shadow: 0px 52px 46px #00000012;
@@ -72,12 +76,16 @@
 
   @media (min-width: 992px) {
     .owl-item .item .card {
-      height: 347px;
+      height: 420px;
       border: none !important;
     }
   }
 
   @media (min-width: 1300px) {
+
+    .owl-item .item .card {
+      height: 380px;
+    }
     .container {
       .category-carousel {
         width: auto;
@@ -85,6 +93,7 @@
         padding: 0 100px;
         overflow: hidden;
       }
+
       .owl-stage-outer {
         overflow: visible;
       }
@@ -140,6 +149,7 @@
   .card:hover {
     position: relative;
     box-shadow: 0px 52px 46px #00000012;
+
     &::after {
       opacity: 1;
     }
